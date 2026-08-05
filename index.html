@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Febryand Nur Hidayat - Developer Portfolio</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">Febryand.</div>
+        <ul class="nav-menu" id="nav-menu">
+            <li><a href="#home" class="nav-link active">Home</a></li>
+            <li><a href="#about" class="nav-link">About</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+        <div class="menu-btn" id="menu-btn">
+            <i class="fas fa-bars"></i>
+        </div>
+    </nav>
+
+    <main class="scroll-container" id="scroll-container">
+
+        <section id="home">
+            <div class="container hero-layout">
+                <div class="hero-text">
+                    <h1 class="motion-element slide-right">
+                        <span class="word-slider">
+                            <span class="word">Fullstack Developer</span>
+                            <span class="word">UI/UX Design</span>
+                            <!-- <span class="word">Software Engineer</span> -->
+                        </span>
+                    </h1>
+                    <p class="motion-element slide-right delay-100">
+                        Hi! I'm <strong>Febryand Nur Hidayat</strong>. a developer
+                        who loves building things and exploring how they work under the hood
+                    </p>
+                    <div class="hero-actions motion-element slide-up delay-200">
+                        <a href="#projects" class="btn btn-primary">See My Work</a>
+                        <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+                    </div>
+                </div>
+
+                <div class="hero-visual motion-element zoom-in delay-300">
+                    <div class="image-frame">
+                        <img src="assets/img/me/me.avif" alt="Febryand Nur Hidayat">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2 class="section-title motion-element slide-up">About Me</h2>
+                <p class="section-subtitle motion-element slide-up delay-100">My background</p>
+
+                <div class="about-grid">
+                    <div class="about-text" style="width: 100%;">
+                        <p class="motion-element slide-right delay-200">
+                            I am a passionate <strong>Full-Stack and Mobile Developer</strong> dedicated to bridging the
+                            gap between pixel-perfect designs and robust system architectures. As a recent graduate with
+                            a degree in <strong>Management Informatics</strong> from <strong>Universitas Amikom
+                                Yogyakarta</strong>, my journey is defined by a commitment to building scalable digital
+                            solutions.
+                        </p>
+                        <p class="motion-element slide-right delay-300">
+                            My practical experience includes engineering mobile features at <strong>PT SIMS
+                                Lifemedia</strong>, specifically developing the <strong>VAS Drive</strong> document
+                            management system using <strong>Flutter</strong>. Currently, I am actively expanding my
+                            expertise by deepening my understanding of <strong>Next.js</strong> to build highly
+                            performant and modern web applications.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <div style="text-align: center; width: 100%;">
+                    <h2 class="section-title motion-element slide-up">Technology Stack</h2>
+                    <p class="section-subtitle motion-element slide-up delay-100">My technical expertise and tools</p>
+                </div>
+
+                <div class="skills-showcase motion-element slide-up delay-200">
+
+                    <div class="skills-tabs" id="skills-tabs-container"></div>
+
+                    <div id="skills-content-container"
+                        style="width: 100%; display: flex; flex-direction: column; align-items: center;"></div>
+
+                </div>
+            </div>
+        </section>
+
+
+
+
+        <section id="projects">
+            <div class="container">
+                <h2 class="section-title motion-element slide-up">My Projects</h2>
+                <p class="section-subtitle motion-element slide-up delay-100">Highlight works I've built</p>
+
+                <!-- <div class="view-more-container motion-element slide-up delay-400"
+                    style="text-align: center; margin-top: 3rem;">
+                    <a href="projects.html" id="view-more-btn" class="btn btn-primary"
+                        style="display: inline-flex; align-items: center; gap: 0.5rem;">
+                        More Projects <i class="fas fa-arrow-right"></i> </a>
+                </div> -->
+
+                <div class="projects-grid">
+                    <div class="project-card motion-element zoom-in delay-200">
+                        <img src="assets/img/work/vas.avif" alt="VAS Drive" class="project-img">
+                        <div class="project-info">
+                            <h3>VAS Mobile</h3>
+                            <p>Operational mobile app for driver document management and employee task tracking
+                                developed during internship at SIMS Lifemedia.</p>
+                        </div>
+                    </div>
+
+                    <div class="project-card motion-element zoom-in delay-300">
+                        <img src="assets/img/work/sampaikan.avif" alt="Laundry Dashboard" class="project-img">
+                        <div class="project-info">
+                            <h3>Company Profile Sampaikan</h3>
+                            <p>Responsive web compro built by client request.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container contact-box motion-element zoom-in">
+                <h2 class="motion-element slide-up delay-100">Let's work together!</h2>
+                <p class="motion-element slide-up delay-200">Currently open for new opportunities.</p>
+                <div class="social-links motion-element slide-up delay-300">
+                    <a href="mailto:ryandnurhidayat@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/ryandnurh" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://wa.me/6287705571605" target="_blank" title="WhatsApp"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
