@@ -70,15 +70,15 @@ document.addEventListener('DOMContentLoaded', () => {
     function renderSkills() {
         const tabsContainer = document.getElementById('skills-tabs-container');
         const contentContainer = document.getElementById('skills-content-container');
-        
+
         if (!tabsContainer || !contentContainer) return;
 
         let tabsHTML = '';
         let contentHTML = '';
 
         skillsData.forEach((category, index) => {
-            const isActive = index === 0 ? 'active' : ''; 
-            
+            const isActive = index === 0 ? 'active' : '';
+
             tabsHTML += `
                 <div class="skill-tab ${isActive}" data-target="${category.id}">
                     ${category.svg}
@@ -87,14 +87,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 </div>
             `;
 
+
             let badgesHTML = '';
-            category.skills.forEach(skill => {
+            category.skills.forEach((skill, index) => {
+                const delay = (index * 0.08) + 's';
+
                 if (skill.isPrimary) {
-                    badgesHTML += `<span class="badge-primary"><span class="star-pulse">✦</span> ${skill.name}</span>`;
+                    badgesHTML += `<span class="badge-primary" style="animation-delay: ${delay}"><span class="star-pulse">✦</span> ${skill.name}</span>`;
                 } else {
-                    badgesHTML += `<span class="badge-secondary">${skill.name}</span>`;
+                    badgesHTML += `<span class="badge-secondary" style="animation-delay: ${delay}">${skill.name}</span>`;
                 }
             });
+
 
             contentHTML += `
                 <div class="skills-content ${isActive}" id="skill-${category.id}">
@@ -125,10 +129,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
 
                 tab.classList.add('active');
-                
+
                 const targetId = tab.getAttribute('data-target');
                 const targetContent = document.getElementById(`skill-${targetId}`);
-                
+
                 if (targetContent) {
                     targetContent.style.display = 'flex';
                     void targetContent.offsetWidth;
@@ -186,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     scrollContainer.addEventListener('wheel', (e) => {
-        e.preventDefault(); 
+        e.preventDefault();
         const direction = e.deltaY > 0 ? 'down' : 'up';
         snapToSection(direction);
     }, { passive: false });
